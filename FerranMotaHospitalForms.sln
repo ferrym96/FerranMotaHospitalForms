@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35004.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FerranMotaHospitalForms", "FerranMotaHospitalForms\FerranMotaHospitalForms.csproj", "{DA7ABB63-A5AE-4F73-BBA5-534AE8DE0BD4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{B6D3506A-4842-4E04-8D78-A43F41351D55}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Hospital\Hospital\Administrativo.cs = ..\..\..\Hospital\Hospital\Administrativo.cs
+		..\..\..\Hospital\Hospital\Empleado.cs = ..\..\..\Hospital\Hospital\Empleado.cs
+		..\..\..\Hospital\Hospital\Medico.cs = ..\..\..\Hospital\Hospital\Medico.cs
+		..\..\..\Hospital\Hospital\Paciente.cs = ..\..\..\Hospital\Hospital\Paciente.cs
+		..\..\..\Hospital\Hospital\Persona.cs = ..\..\..\Hospital\Hospital\Persona.cs
+		..\..\..\Hospital\Hospital\Program.cs = ..\..\..\Hospital\Hospital\Program.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA7ABB63-A5AE-4F73-BBA5-534AE8DE0BD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA7ABB63-A5AE-4F73-BBA5-534AE8DE0BD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA7ABB63-A5AE-4F73-BBA5-534AE8DE0BD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA7ABB63-A5AE-4F73-BBA5-534AE8DE0BD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC8AFBE9-41FA-4748-AC49-D311A4A220F4}
+	EndGlobalSection
+EndGlobal
