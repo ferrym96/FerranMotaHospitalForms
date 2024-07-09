@@ -25,10 +25,10 @@ namespace Hospital
 
         public override string ToString()
         {
-            return $"Administrativo: {Nombre} {Apellido}\n" +
-                   $"DNI: {DNI}\n" +
-                   $"Sueldo: {Sueldo}\n" +
-                   $"Año de Incorporación: {AnyoIncorporacion}\n" +
+            return $"Administrativo: {Nombre} {Apellido} \n" +
+                   $"DNI: {DNI} \n" +
+                   $"Sueldo: {Sueldo} \n" +
+                   $"Año de Incorporación: {AnyoIncorporacion} \n" +
                    $"Departamento: {Departamento}";
         }
     }
