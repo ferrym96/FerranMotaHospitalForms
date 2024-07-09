@@ -26,10 +26,11 @@ namespace Hospital
            
             string medicamentosStr = string.Join(", ", Medicamentos);
 
-            return $"Paciente: {Nombre} {Apellido}\n" +
-                   $"DNI: {DNI}\n" +
-                   $"Planta: {Planta}\n" +
-                   $"Medicamentos: {medicamentosStr}\n" +
+            return $"Paciente: {Nombre} {Apellido} \n" +
+                   $"DNI: {DNI} \n" +
+                   $"Planta: {Planta} \n" +
+                   $"Médico: {Medico} \n" +
+                   $"Medicamentos: {medicamentosStr} \n" +
                    $"Fecha de Ingreso: {FechaIngreso.ToShortDateString()}";
         }
     }

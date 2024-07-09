@@ -88,12 +88,12 @@
             this.groupListarPacientes = new System.Windows.Forms.GroupBox();
             this.buttonBorrarPaciente = new System.Windows.Forms.Button();
             this.groupListarMedicos = new System.Windows.Forms.GroupBox();
-            this.listMedicos = new System.Windows.Forms.ListView();
             this.buttonBorrarMedico = new System.Windows.Forms.Button();
             this.groupListarAdmin = new System.Windows.Forms.GroupBox();
-            this.listAdmin = new System.Windows.Forms.ListView();
             this.buttonBorrarAdmin = new System.Windows.Forms.Button();
             this.listPacientes = new System.Windows.Forms.ListBox();
+            this.listMedicos = new System.Windows.Forms.ListBox();
+            this.listAdmin = new System.Windows.Forms.ListBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupCrearPaciente.SuspendLayout();
             this.groupCrearMedico.SuspendLayout();
@@ -216,6 +216,8 @@
             // 
             this.comboMedicoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboMedicoPaciente.FormattingEnabled = true;
+            this.comboMedicoPaciente.Items.AddRange(new object[] {
+            "--"});
             this.comboMedicoPaciente.Location = new System.Drawing.Point(251, 55);
             this.comboMedicoPaciente.Name = "comboMedicoPaciente";
             this.comboMedicoPaciente.Size = new System.Drawing.Size(180, 24);
@@ -408,6 +410,7 @@
             this.buttonCancelarMedico.TabIndex = 15;
             this.buttonCancelarMedico.Text = "Cancelar";
             this.buttonCancelarMedico.UseVisualStyleBackColor = true;
+            this.buttonCancelarMedico.Click += new System.EventHandler(this.buttonCancelarMedico_Click);
             // 
             // buttonCrearMedico
             // 
@@ -569,6 +572,7 @@
             this.buttonCancelarAdmin.TabIndex = 15;
             this.buttonCancelarAdmin.Text = "Cancelar";
             this.buttonCancelarAdmin.UseVisualStyleBackColor = true;
+            this.buttonCancelarAdmin.Click += new System.EventHandler(this.buttonCancelarAdmin_Click);
             // 
             // buttonCrearAdmin
             // 
@@ -732,15 +736,6 @@
             this.groupListarMedicos.Text = "Ver médicos";
             this.groupListarMedicos.Visible = false;
             // 
-            // listMedicos
-            // 
-            this.listMedicos.HideSelection = false;
-            this.listMedicos.Location = new System.Drawing.Point(18, 32);
-            this.listMedicos.Name = "listMedicos";
-            this.listMedicos.Size = new System.Drawing.Size(422, 235);
-            this.listMedicos.TabIndex = 15;
-            this.listMedicos.UseCompatibleStateImageBehavior = false;
-            // 
             // buttonBorrarMedico
             // 
             this.buttonBorrarMedico.Location = new System.Drawing.Point(327, 286);
@@ -749,6 +744,7 @@
             this.buttonBorrarMedico.TabIndex = 14;
             this.buttonBorrarMedico.Text = "Borrar médico";
             this.buttonBorrarMedico.UseVisualStyleBackColor = true;
+            this.buttonBorrarMedico.Click += new System.EventHandler(this.buttonBorrarMedico_Click);
             // 
             // groupListarAdmin
             // 
@@ -762,15 +758,6 @@
             this.groupListarAdmin.Text = "Ver administrativos";
             this.groupListarAdmin.Visible = false;
             // 
-            // listAdmin
-            // 
-            this.listAdmin.HideSelection = false;
-            this.listAdmin.Location = new System.Drawing.Point(18, 32);
-            this.listAdmin.Name = "listAdmin";
-            this.listAdmin.Size = new System.Drawing.Size(422, 235);
-            this.listAdmin.TabIndex = 15;
-            this.listAdmin.UseCompatibleStateImageBehavior = false;
-            // 
             // buttonBorrarAdmin
             // 
             this.buttonBorrarAdmin.Location = new System.Drawing.Point(298, 286);
@@ -779,19 +766,38 @@
             this.buttonBorrarAdmin.TabIndex = 14;
             this.buttonBorrarAdmin.Text = "Borrar administrativo";
             this.buttonBorrarAdmin.UseVisualStyleBackColor = true;
+            this.buttonBorrarAdmin.Click += new System.EventHandler(this.buttonBorrarAdmin_Click);
             // 
             // listPacientes
             // 
             this.listPacientes.FormattingEnabled = true;
             this.listPacientes.ItemHeight = 16;
-            this.listPacientes.Location = new System.Drawing.Point(20, 32);
+            this.listPacientes.Location = new System.Drawing.Point(20, 36);
             this.listPacientes.Name = "listPacientes";
             this.listPacientes.Size = new System.Drawing.Size(420, 244);
             this.listPacientes.TabIndex = 15;
             // 
+            // listMedicos
+            // 
+            this.listMedicos.FormattingEnabled = true;
+            this.listMedicos.ItemHeight = 16;
+            this.listMedicos.Location = new System.Drawing.Point(20, 36);
+            this.listMedicos.Name = "listMedicos";
+            this.listMedicos.Size = new System.Drawing.Size(420, 244);
+            this.listMedicos.TabIndex = 15;
+            // 
+            // listAdmin
+            // 
+            this.listAdmin.FormattingEnabled = true;
+            this.listAdmin.ItemHeight = 16;
+            this.listAdmin.Location = new System.Drawing.Point(20, 36);
+            this.listAdmin.Name = "listAdmin";
+            this.listAdmin.Size = new System.Drawing.Size(420, 244);
+            this.listAdmin.TabIndex = 16;
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(658, 369);
+            this.ClientSize = new System.Drawing.Size(659, 364);
             this.Controls.Add(this.groupListarAdmin);
             this.Controls.Add(this.groupListarMedicos);
             this.Controls.Add(this.groupListarPacientes);
@@ -874,13 +880,13 @@
         private System.Windows.Forms.GroupBox groupListarPacientes;
         private System.Windows.Forms.Button buttonBorrarPaciente;
         private System.Windows.Forms.GroupBox groupListarMedicos;
-        private System.Windows.Forms.ListView listMedicos;
         private System.Windows.Forms.Button buttonBorrarMedico;
         private System.Windows.Forms.GroupBox groupListarAdmin;
-        private System.Windows.Forms.ListView listAdmin;
         private System.Windows.Forms.Button buttonBorrarAdmin;
         private System.Windows.Forms.ComboBox comboMedicoPaciente;
         private System.Windows.Forms.ListBox listPacientes;
+        private System.Windows.Forms.ListBox listMedicos;
+        private System.Windows.Forms.ListBox listAdmin;
     }
 
         #endregion
