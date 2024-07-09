@@ -15,7 +15,6 @@ namespace FerranMotaHospitalForms
 {
     public partial class Form1 : Form
     {
-        // Listas para almacenar los datos
         private List<Paciente> pacientes = new List<Paciente>();
         private List<Medico> medicos = new List<Medico>();
         private List<Administrativo> administrativos = new List<Administrativo>();
@@ -227,10 +226,8 @@ namespace FerranMotaHospitalForms
 
         private void buttonCancelarPaciente_Click(object sender, EventArgs e)
         {
-            // Mostrar ventana emergente para confirmación
             DialogResult result = MessageBox.Show("¿Está seguro de que desea cancelar y eliminar el contenido?", "Confirmar cancelación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Verificar la respuesta del usuario
             if (result == DialogResult.Yes)
             {
                 LimpiarCamposPaciente();
@@ -239,7 +236,6 @@ namespace FerranMotaHospitalForms
 
         private void LimpiarCamposPaciente()
         {
-            // Limpiar todos los campos relacionados con la creación de pacientes
             txtNombrePaciente.Text = "";
             txtApellidosPaciente.Text = "";
             txtDNIPaciente.Text = "";
@@ -251,10 +247,8 @@ namespace FerranMotaHospitalForms
 
         private void buttonCancelarMedico_Click(object sender, EventArgs e)
         {
-            // Mostrar ventana emergente para confirmación
             DialogResult result = MessageBox.Show("¿Está seguro de que desea cancelar y eliminar el contenido?", "Confirmar cancelación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // Verificar la respuesta del usuario
             if (result == DialogResult.Yes)
             {
                 LimpiarCamposMedico();
@@ -318,11 +312,9 @@ namespace FerranMotaHospitalForms
         }
 
         private void buttonCancelarAdmin_Click(object sender, EventArgs e)
-        {
-            // Mostrar ventana emergente para confirmación
+        {            
             DialogResult result = MessageBox.Show("¿Está seguro de que desea cancelar y eliminar el contenido?", "Confirmar cancelación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            // Verificar la respuesta del usuario
+                        
             if (result == DialogResult.Yes)
             {
                 LimpiarCamposAdmin();
@@ -331,7 +323,6 @@ namespace FerranMotaHospitalForms
 
         private void LimpiarCamposMedico()
         {
-            // Limpiar todos los campos relacionados con la creación de médicos
             txtNombreMedico.Text = "";
             txtApellidosMedico.Text = "";
             txtDNIMedico.Text = "";
@@ -342,7 +333,6 @@ namespace FerranMotaHospitalForms
 
         private void LimpiarCamposAdmin()
         {
-            // Limpiar todos los campos relacionados con la creación de administrativos
             txtNombreAdmin.Text = "";
             txtApellidosAdmin.Text = "";
             txtDNIAdmin.Text = "";
